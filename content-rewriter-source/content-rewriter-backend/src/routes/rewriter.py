@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, request
-import openai
+from openai import OpenAI
 import os
 import re
 
