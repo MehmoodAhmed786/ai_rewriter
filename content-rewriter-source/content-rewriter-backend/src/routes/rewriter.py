@@ -10,6 +10,7 @@ client = OpenAI(
     base_url=os.getenv('OPENAI_API_BASE', 'https://api.openai.com/v1')
 )
 
+
 def get_rewrite_prompt(mode, tone, percentage=None):
     """Generate appropriate prompt based on mode and tone"""
     
