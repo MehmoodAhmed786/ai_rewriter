@@ -5,10 +5,9 @@ import re
 
 rewriter_bp = Blueprint('rewriter', __name__)
 
-# Initialize OpenAI client
-client = openai.OpenAI(
+client = OpenAI(
     api_key=os.getenv('OPENAI_API_KEY'),
-    base_url=os.getenv('OPENAI_API_BASE')
+    base_url=os.getenv('OPENAI_API_BASE', 'https://api.openai.com/v1')
 )
 
 def get_rewrite_prompt(mode, tone, percentage=None):
